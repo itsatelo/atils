@@ -11,6 +11,14 @@ Atils is a simplistic package made to make your everyday life easier, even if by
 More things will be added as I see that I might need them in the future.<br>
 
 [`Contact Support Server`](https://discord.gg/jCZRZDjkzf)
+
+> Dev Notes<br>
+> As of v1.0.3, I added some new stuff (in v1.0.2 technically), but then forgot the README file, so I had to upload a new version.<br>
+> As of v1.0.4, I forgot the Collection#delete() method.<br>
+> As of v1.0.5, I forgot to update a couple things.
+
+> Meet the CollectionUtil and ConsoleUtil, the two new features of Atils.
+
 ---
 ## Example Usages
 ### MergeUtility<br>
@@ -127,3 +135,19 @@ console.log(things.get("one"), things.get("two"));
     // output:
     // hello world
 ```
+
+Methods:<br>
+Method | Description | Parameters | Version
+|---|---|---|---|
+`clear()` | Clears all values saved. | `N/A` | `1.0.2`
+`set()` | Sets a value to a key. | `key`, `value` | `1.0.2`
+`all()` | Returns all keys and values in an array. | `N/A` | `1.0.2`
+`exists()` | Checks if a key exists. | `key` | `1.0.2`
+`allExists()` | Checks if all items of an array exists. | `keys` | `1.0.2`
+`anyExists()` | Checks if any items of an array exists. | `keys` | `1.0.2`
+`has()` | Returns true if the Collection contains a value. | `value` | `1.0.2`
+`first()` | Returns the first pair in the Collection. | `N/A` | `1.0.2`
+`get()` | Gets a value from a key in the Collection. | `key` | `1.0.2`
+`getByValue()` | Gets a key from a value. | `value` | `1.0.2`
+`at()` | Gets a value from where it is in the Collection. | `index` | `1.0.2`
+`delete()` | Deletes a key-value pair. | `key` | `1.0.4`
