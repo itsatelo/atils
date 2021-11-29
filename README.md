@@ -127,3 +127,18 @@ console.log(things.get("one"), things.get("two"));
     // output:
     // hello world
 ```
+
+Methods:<br>
+Method | Description | Parameters | Version
+|---|---|---|---|
+`clear()` | Clears all values saved. | `N/A` | `1.0.2`
+`set()` | Sets a value to a key. | `key`, `value` | `1.0.2`
+`all()` | Returns all keys and values in an array. | `N/A` | `1.0.2`
+`exists()` | Checks if a key exists. | `key` | `1.0.2`
+`allExists()` | Checks if all items of an array exists. | `keys` | `1.0.2`
+`anyExists()` | Checks if any items of an array exists. | `keys` | `1.0.2`
+`has()` | Returns true if the Collection contains a value. | `value` | `1.0.2`
+`first()` | Returns the first pair in the Collection. | `N/A` | `1.0.2`
+`get()` | Gets a value from a key in the Collection. | `key` | `1.0.2`
+`getByValue()` | Gets a key from a value. | `value` | `1.0.2`
+`at()` | Gets a value from where it is in the Collection. | `index` | `1.0.2`
