@@ -11,6 +11,12 @@ Atils is a simplistic package made to make your everyday life easier, even if by
 More things will be added as I see that I might need them in the future.<br>
 
 [`Contact Support Server`](https://discord.gg/jCZRZDjkzf)
+
+> Dev Notes<br>
+> So, after my lovely update-spam of last night, I wanted to add a quick date-formatter.<br>
+
+> Meet the CollectionUtil, DateUtil, and ConsoleUtil, the two new features of Atils.
+
 ---
 ## Example Usages
 ### MergeUtility<br>
@@ -99,6 +105,7 @@ ErrorManager("UhOh Error", "I did an oopsie!");
 throw new RawErrorManager("UhOh Error", "I did an oopsie!");
 ```
 Yeah, that's all there is for that.
+
 ---
 ### ConsoleUtility<br>
 The ConsoleUtility is a simpler way to send information to your console!<br>
@@ -142,3 +149,16 @@ Method | Description | Parameters | Version
 `get()` | Gets a value from a key in the Collection. | `key` | `1.0.2`
 `getByValue()` | Gets a key from a value. | `value` | `1.0.2`
 `at()` | Gets a value from where it is in the Collection. | `index` | `1.0.2`
+`delete()` | Deletes a key-value pair. | `key` | `1.0.4`
+
+---
+### DateUtility<br>
+The DateUtility is just a simple way to format dates.
+`DAY, MM/DD/YY at HR/MIN/SEC A/P.M.`
+```js
+const { DateUtil } = require('atils');
+// You can change DateUtil with date.
+
+const date = DateUtil();
+console.log(date);
+```
