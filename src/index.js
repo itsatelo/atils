@@ -2,6 +2,7 @@ const { Collection } = require('./Utils/CollectionUtil.js');
 const { log } = require('./Utils/ConsoleUtil.js');
 const { ErrorManager, RawErrorManager } = require('./Utils/ErrorUtil.js');
 const { MergeUtility, RawMergeUtility } = require('./Utils/MergeUtil.js');
+const { DateUtil } = require('./Utils/DateUtil.js');
 
 const { ExcessiveError } = require('./Utils/Presets/Errors.js');
 
@@ -25,6 +26,10 @@ exports.RawErrorManager = RawErrorManager;
 exports.MergeUtil = MergeUtility;
 exports.Classes = MergeUtility;
 exports.RawMergeUtil = RawMergeUtility;
+
+// Exports for DateUtil
+exports.DateUtil = DateUtil;
+exports.date = DateUtil;
 
 // Exports for Preset Errors
 exports.Errors = {
