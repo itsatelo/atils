@@ -151,3 +151,14 @@ Method | Description | Parameters | Version
 `getByValue()` | Gets a key from a value. | `value` | `1.0.2`
 `at()` | Gets a value from where it is in the Collection. | `index` | `1.0.2`
 `delete()` | Deletes a key-value pair. | `key` | `1.0.4`
+
+---
+### DateUtil
+The DateUtility is just a simple way to format dates. DAY, MM/DD/YY at HR/MIN/SEC A/P.M.
+```js
+const { DateUtil } = require('atils');
+// You can change DateUtil with date.
+
+const date = DateUtil(new Date());
+console.log(date);
+```
