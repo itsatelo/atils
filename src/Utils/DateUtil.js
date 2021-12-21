@@ -1,5 +1,4 @@
-function DateUtil() {
-    const d = new Date();
+function DateUtil(d) {
     let day = d.getDay();
     let date = d.getDate();
     let month = d.getMonth();
