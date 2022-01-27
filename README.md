@@ -1,6 +1,13 @@
 # Atils
 > A simple package to perform simple things.
 
+> **Warning**
+> This package has been deprecated and will no longer receive updates (atleast until further notice).<br>
+> I have nothing that I find necessary, or remotely worthwile, to add for `v1.0.10`/`v1.1.0`, and so have decided to deprecate the package until I have something that I'm motivated enough to add.
+
+> **The RequestUtility does not work.**
+> I made it in a bit of a sloppy way, and so it doesn't work... at all. If I do make plans to release another version of atils, I will update the RequestUtility so that it works as intended.
+
 [Github](https://github.com/itsatelo/atils)
 [Atelo's Twitter](https://twitter.com/itsatelo)
 
