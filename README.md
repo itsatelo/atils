@@ -1,47 +1,13 @@
-# Atils
-> A simple package to perform simple things.
+# `atils@1.1.0`
+Welcome to the latest update for atils!<br>
+I know I said that I'd deprecate it, but I lied, because I became creative again... somewhat.
 
-> **Warning**
-> This package has been deprecated and will no longer receive updates (atleast until further notice).<br>
-> I have nothing that I find necessary, or remotely worthwile, to add for `v1.0.10`/`v1.1.0`, and so have decided to deprecate the package until I have something that I'm motivated enough to add.
+Anyways, I removed the `DateUtility`, `CollectionUtility`, and `RequestUtility` (plus all of their sub-variants), and rewrote every other one. I also added a new EnumUtility and StructureUtility to help a bit more. That's about it.
 
-> **The RequestUtility does not work.**
-> I made it in a bit of a sloppy way, and so it doesn't work... at all. If I do make plans to release another version of atils, I will update the RequestUtility so that it works as intended.
+I might have some examples up in `atils@1.1.2`, but I don't know.
 
-[Github](https://github.com/itsatelo/atils)
-[Atelo's Twitter](https://twitter.com/itsatelo)
+## Little Note
+I forgot to add the documentation and stuff, and so we're at `@1.1.0-build` right now. Same thing happened with `@1.0.9`/`-stable` as well.
 
-## Dev
-> **Dev Log: v1.0.9**<br>
-> So, I did a lot over the past couple nights to rewrite Atils to be better than it was. I haven't *entirely* tested everything,<br>
-> but I'm pretty sure 90% of it works. If something doesn't work, or you'd like something added, submit an Issue on GitHub.<br>
-
-> **The README file is now limited to Dev Notes and Patch Notes.**<br>
-> For Documentation, please see the Github.
-
-> **Patch Notes: v1.0.8**<br>
-- Added:
-    - ObjectUtility
-        - Allows for Object Customization.
-        - Can be converted into a Collection.
-    - RequestUtility
-        - Allows for simple POST and GET requests via Axios.
-        - Can submit a GET request directly into a Collection.
-- Updated:
-    - CollectionUtility
-        - Added new Methods to support the new ObjectUtility.
-        - Moved some Methods into others for less effort.
-    - ConsoleUtility
-        - Now allows for multiple types of `info` to be provided.
-    - DateUtility
-        - Fixed an issue with months not displaying properly.
-        - Added customization options.
-
-- Notes:
-    - All Utilities were moved into Classes, and now must be called with the `new` keyword.
-        - If you'd like me to add functions for each Utility, submit an Issue on GitHub.
-    - Both the `ObjectUtility` and `RequestUtility` are still in consideration.
-        - They've been added for now, but don't be surprised if they're gone later.
-
----
-`atils` by `atelo`
+[Github](https://github.com/ItsAtelo/atils)<br>
+[Atelo's Twitter](https://twitter.com/itsatelo)<br>

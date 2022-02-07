@@ -1,34 +1,36 @@
-const { CollectionUtility } = require('./Utilities/Collection.js');
-const { ConsoleUtility } = require('./Utilities/Console.js');
-const { DateUtility } = require('./Utilities/Date.js');
-const { ErrorUtility } = require('./Utilities/Error.js');
-const { MergeUtility } = require('./Utilities/Merge.js');
-const { ObjectUtility } = require('./Utilities/Object.js');
-const { RequestUtility, CollectionRequestUtility } = require('./Utilities/Request.js');
+const current = require('./@1.1.1/Exports.js');
 
-exports = {
-    Collection: CollectionUtility,
-    CollectionUtility: CollectionUtility,
+exports.ConsoleStyles = current.ConsoleStyles;
 
-    Console: ConsoleUtility,
-    ConsoleUtility: ConsoleUtility,
+exports.Enum = current.Enum;
+exports.EnumGroup = current.EnumGroup;
+exports.EnumUtil = current.EnumManager;
+exports.EnumUtility = current.EnumManager;
+exports.EnumManager = current.EnumManager;
 
-    Date: DateUtility,
-    DateUtility: DateUtility,
+exports.Error = current.ErrorBuilder;
+exports.ErrorUtil = current.ErrorBuilder;
+exports.ErrorUtility = current.ErrorBuilder;
+exports.BaseError = current.BaseError;
 
-    Error: ErrorUtility,
-    ErrorUtility: ErrorUtility,
+exports.Console = current.ConsoleUtil;
+exports.ConsoleUtil = current.ConsoleUtil;
+exports.ConsoleUtility = current.ConsoleUtil;
 
-    Merge: MergeUtility,
-    MergeUtility: MergeUtility,
+exports.Merge = current.MergeUtil;
+exports.MergeUtil = current.MergeUtil;
+exports.MergeUtility = current.MergeUtil;
 
-    Object: ObjectUtility,
-    ObjectUtility: ObjectUtility,
+exports.Object = current.ObjectUtil;
+exports.ObjectUtil = current.ObjectUtil;
+exports. ObjectUtility = current.ObjectUtil;
 
-    Request: RequestUtility,
-    RequestUtility: RequestUtility,
-    RequestCollection: CollectionRequestUtility,
-    CollectionRequestUtility: CollectionRequestUtility,
+exports.Structure = current.StructureUtil;
+exports.StructureUtil = current.StructureUtil;
+exports.StructureUtility = current.StructureUtil;
+
+exports.credits = function() {
+    console.log(`Thanks for using Atils! If you need any help, feel free and submit an issue on GitHub and I'll try to respond!`);
 };
 
-// jsdoc -c jsdoc.json -t ../node_modules/ink-docstrap/template -R .//README.md -r .
+// jsdoc -c jsdoc.json -t ./node_modules/ink-docstrap/template -R .//README.md -r . 
