@@ -21,12 +21,19 @@
 
 - Added the `is()` method to the `StructureUtility`.
 
-## Expected Changes for: `atils@1.1.3`
-- Rename the `EnumManager` to `EnumClient`.
-    - Expect this to be decommissioned in `@1.2.0`.
-- Rename the `EnumGroup` to `EnumManager`.
-- Add the `modify()` method to the `StructureUtility`.
-- Add the `base()` method to the `StructureUtility`.
-- Add the `seal()` method to the `StructureUtility`.
-- Add the `url` type to the `StructureUtility`.
-- Allow for the `StructureUtility` to read for `ObjectUtility`.
+## 1.1.3
+- Fixed an issue where the `StructureUtility` would ignore typos and return `true`.
+- Renamed the `EnumManager` to `EnumClient`
+    - See Concept Board for `@1.2.0`
+    
+- Added the `modify()` method to the `StructureUtility`.
+- Added the `base()` method to the `StructureUtility`.
+- Added the `seal()` method to the `StructureUtility`.
+- Added the `enum group` and `enum client` Structure Types for the `StructureUtility`.
+
++ **Important**: `@1.2.0` Concept Board out. See MD file.
+    - Concept Boards will be used to determine what will be released in the next updates, because I can't remember things.
+
+## Expected Changes for: `atils@1.1.4`
+**There are no expected changes for this update.**<br>
+Please check the [GitHub](https://github.com/itsatelo/atils) later to see if there are any changes to this.

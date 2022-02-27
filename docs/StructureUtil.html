@@ -33,14 +33,14 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Enum.html">Enum</a></li><li><a href="EnumGroup.html">EnumGroup</a></li><li><a href="ConsoleUtil.html">ConsoleUtil</a></li><li><a href="EnumManager.html">EnumManager</a></li><li><a href="BaseError.html">BaseError</a></li><li><a href="ErrorBuilder.html">ErrorBuilder</a></li><li><a href="MergeUtil.html">MergeUtil</a></li><li><a href="ObjectUtil.html">ObjectUtil</a></li><li><a href="StructureUtil.html">StructureUtil</a></li>
+					<li><a href="Enum.html">Enum</a></li><li><a href="EnumGroup.html">EnumGroup</a></li><li><a href="ConsoleUtil.html">ConsoleUtil</a></li><li><a href="EnumClient.html">EnumClient</a></li><li><a href="BaseError.html">BaseError</a></li><li><a href="ErrorBuilder.html">ErrorBuilder</a></li><li><a href="MergeUtil.html">MergeUtil</a></li><li><a href="ObjectUtil.html">ObjectUtil</a></li><li><a href="StructureUtil.html">StructureUtil</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="global.html#exception">exception</a></li>
+					<li><a href="global.html#exception">exception</a></li><li><a href="global.html#error">error</a></li>
 				</ul>
 			</li>
 			
@@ -253,7 +253,7 @@
         
     <pre class="sunlight-highlight-javascript">// expected output: trueconst structure = new Structure({    exampleString: &quot;string&quot;,    exampleBoolean: &quot;boolean&quot;,});structure({ exampleString: &quot;HI!&quot;, exampleBoolean: true }).then(is =&gt; {    console.log(is);});</pre>
 
-    <pre class="sunlight-highlight-javascript">// Types of Structuresconst structure = new Structure({    string: &quot;string&quot;,    boolean: &quot;boolean&quot;,    number: &quot;number&quot;,    bigint: &quot;bigint&quot;,    array: &quot;array&quot;,    symbol: &quot;symbol&quot;,    fn: &quot;function&quot;,    enum: &quot;enum&quot;,});</pre>
+    <pre class="sunlight-highlight-javascript">// Types of Structuresconst structure = new Structure({    string: &quot;string&quot;,    boolean: &quot;boolean&quot;,    number: &quot;number&quot;,    bigint: &quot;bigint&quot;,    array: &quot;array&quot;,    symbol: &quot;symbol&quot;,    fn: &quot;function&quot;,    enum: &quot;enum&quot;,    enum_group: &quot;enum group&quot;,    enum_client: &quot;enum client&quot;,});</pre>
 
 
     
@@ -274,6 +274,486 @@
 
     
 
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="is"><span class="type-signature"></span>is(structure)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Determines if the provided Object matches this Structure.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>structure</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Whether the provided Object matches this Structure.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		Utils/StructureUtil.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="modify"><span class="type-signature"></span>modify(toAdd)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Modifies the current Structure.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>toAdd</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">What to add to this Structure.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		Utils/StructureUtil.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="base"><span class="type-signature"></span>base()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Returns a new iteration of the original Structure.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		Utils/StructureUtil.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    - The original variation.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="StructureUtil.html">StructureUtil</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="seal"><span class="type-signature"></span>seal()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Seals the Structure.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		Utils/StructureUtil.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        </dl>
     
 
     
@@ -325,7 +805,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a>
 	
-		on 02-20-2022
+		on 02-27-2022
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
