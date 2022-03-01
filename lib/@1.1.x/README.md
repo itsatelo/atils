@@ -34,6 +34,16 @@
 + **Important**: `@1.2.0` Concept Board out. See MD file.
     - Concept Boards will be used to determine what will be released in the next updates, because I can't remember things.
 
-## Expected Changes for: `atils@1.1.4`
+## 1.1.4
+- Fixed an issue with information display with the `ConsoleUtility`.
+- Updated the `@1.2.0` Concept Board.
+
+- Added the `any` Structure Type for the `StructureUtility`.
+
++ **Important**: `@1.2.0` Concept Board out. See MD file.
+    - Concept Boards will be used to determine what will be released in the next updates, because I can't remember things.
+
+
+## Expected Changes for: `atils@1.1.5`
 **There are no expected changes for this update.**<br>
 Please check the [GitHub](https://github.com/itsatelo/atils) later to see if there are any changes to this.
