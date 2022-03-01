@@ -9,5 +9,5 @@ Open a Version Directory to find a README file containing the current patch note
 [GitHub](https://github.com/itsatelo/atils)<br>
 [Twitter](https://twitter.com/itsatelo)<br>
 
-Current Release: **1.1.3**<br>
-Updated: `2/27/2022` by `itsatelo`
+Current Release: **1.1.4**<br>
+Updated: `2/28/2022` by `itsatelo`
