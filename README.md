@@ -33,3 +33,7 @@ I'm also thinking that, after the `@1.2.x` series is done, I should stop working
 npm i atils-dev
 ```
 to install the dev build.
+
+There's no documentation for the  dev build; so you'd best rely on that intellisense...<br>
+Also, don't try using Soft; I'm highly unsure of if it works, and it is quite unstable.<br>
+You're also unsure of how it works though.
