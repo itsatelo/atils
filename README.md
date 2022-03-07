@@ -8,24 +8,28 @@ Open a Version Directory to find a README file containing the current patch note
 [NPM](https://npmjs.com/package/atils)<br>
 [GitHub](https://github.com/itsatelo/atils)<br>
 [Twitter](https://twitter.com/itsatelo)<br>
+[Patreon](https://patreon.com/itsatelo)<br>
 
 Current Release: **1.1.4**<br>
 Updated: `2/28/2022` by `itsatelo`
 
-# Notice
-## `@1.2.0`
-I've started to work on `atils@1.2.0`! **Every** Utility will be rewritten to better suite how the project should have gone a long time ago, and it'll be ready for when it's needed by others.
-
-*You will be able to use `@1.1.4` when you install `@1.2.0`, just use the following snippet:*
-```js
-const atils = require('atils').Previous;
-```
-*If `@1.3.0` is released, then this is how you would install `@1.1.4` and `@1.2.0`:*
+# @1.2.0 Notice
+### I've started working on `atils@1.2.0`!
+It's taking me quite awhile to work on, as I work full-time and am only programming as a hobby.<br>
+**When @1.2.0 releases, installing @1.1.4 will still be possible without downgrading.**<br>
+The reason I'm doing this is because I want to allow users to mix-and-match between previous versions of utilities, without the trouble of "using multiple require lines".<br>
+It'll be quite simple to retrieve `@1.1.4` from `@1.2.0`, just add the following snippet:
 ```js
 const { History } = require('atils');
-const { Previous } = require('atils');
-let atils = History('v1.1.x'); // You can also provide the parameters: 'v1.1.4', '1.1.x', '1.1', 'v1.1', '1.1.4'
-atils = Previous;
+const atils = History('v1.1.x');
+const { ConsoleUtility } = atils; // this is an example of getting specific utility from a previous version of atils.
 ```
 
-Just know that you will not be able to install specific versions, such as `@1.1.3`, `@1.0.9-stable`, etc.
+However, **as of yet**, I have no plans of supporting @1.1.4 **if** @2.0.0 or @1.3.0 is released.<br>
+I'm also thinking that, after the `@1.2.x` series is done, I should stop working on the project.
+
+**However** in the meantime, you are now able to install the dev build of atils! Use the following snippet:
+```
+npm i atils-dev
+```
+to install the dev build.
