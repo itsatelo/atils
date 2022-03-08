@@ -4,23 +4,23 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Atils Class: MergeUtil</title>
+	<title>atils Source: atils@1.2.x/Enums/ConsoleStyles.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<link type="text/css" rel="stylesheet" href="styles/sunlight.dark.css">
 
-	<link type="text/css" rel="stylesheet" href="styles/site.lumen.css">
+	<link type="text/css" rel="stylesheet" href="styles/site.paper.css">
 
 </head>
 
 <body>
 
-<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="navbar navbar-default navbar-fixed-top ">
 <div class="container">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="index.html">Atils</a>
+		<a class="navbar-brand" href="index.html">atils</a>
 		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
@@ -32,15 +32,15 @@
 			
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
-				<ul class="dropdown-menu ">
-					<li><a href="Enum.html">Enum</a></li><li><a href="EnumGroup.html">EnumGroup</a></li><li><a href="ConsoleUtil.html">ConsoleUtil</a></li><li><a href="EnumClient.html">EnumClient</a></li><li><a href="BaseError.html">BaseError</a></li><li><a href="ErrorBuilder.html">ErrorBuilder</a></li><li><a href="MergeUtil.html">MergeUtil</a></li><li><a href="ObjectUtil.html">ObjectUtil</a></li><li><a href="StructureUtil.html">StructureUtil</a></li>
+				<ul class="dropdown-menu inline">
+					<li><a href="Console.html">Console</a></li><li><a href="Enum.html">Enum</a></li><li><a href="ErrorBuilder.html">ErrorBuilder</a></li><li><a href="ErrorResolver.html">ErrorResolver</a></li><li><a href="Merge.html">Merge</a></li><li><a href="RawEnum.html">RawEnum</a></li><li><a href="RawError.html">RawError</a></li><li><a href="Soft.html">Soft</a></li><li><a href="Structure.html">Structure</a></li>
 				</ul>
 			</li>
 			
 			<li class="dropdown">
 				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
-				<ul class="dropdown-menu ">
-					<li><a href="global.html#exception">exception</a></li><li><a href="global.html#error">error</a></li>
+				<ul class="dropdown-menu inline">
+					<li><a href="global.html#BackgroundColor">BackgroundColor</a></li><li><a href="global.html#Color">Color</a></li><li><a href="global.html#History">History</a></li><li><a href="global.html#Style">Style</a></li>
 				</ul>
 			</li>
 			
@@ -67,225 +67,107 @@
 <div class="row">
 
 	
-	<div class="col-md-8">
+	<div class="col-md-12">
 	
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: MergeUtil</h1>
+		<h1 class="page-title">Source: atils@1.2.x/Enums/ConsoleStyles.js</h1>
+    
 <section>
-
-<header>
-    
-        <h2>
-        MergeUtil
-        </h2>
-        
-    
-</header>
-
-
-<article>
-    <div class="container-overview">
-    
-        
-<hr>
-<dt>
-    <h4 class="name" id="MergeUtil"><span class="type-signature"></span>new MergeUtil(classes)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        - Simple Class-Merging tool.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>classes</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">any</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The classes to merge.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-	<dt class="tag-version method-doc-label method-doc-details-label">Version:</dt>
-	<dd class="tag-version">
-		<ul class="dummy">
-			<li>1.0.3</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		Utils/MergeUtil.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    A class that's merged from all provided classes.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">*</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
+    <article>
+        <pre
+            class="sunlight-highlight-javascript ">const Enum = require('../Utilities/Enum.js');
+
+// Mess with these in the future; goal: lower the count of the textStyle resolver
+// ConsoleStyles.textStyle.bright raises the brightness of the color, I haven't messed with the others.
+const ConsoleStyles = new Enum({
+    all: {
+        default: '\x1b[0m',
+        reset: '\x1b[0m',
+    },
+
+    textStyle: {
+        bright: '\x1b[1m',
+        dim: '\x1b[2m',
+        underscore: '\x1b[4m',
+        blink: '\x1b[5m',
+        reverse: '\x1b[7m',
+        invisible: '\x1b[8m',
+
+        dark: '\x1b[2m',
+        hidden: '\x1b[8m',
+
+        default: '\x1b[0m',
+        reset: '\x1b[0m',
+    },
+
+    textColor: {
+        black: '\x1b[30m',
+        red: '\x1b[31m',
+        green: '\x1b[32m',
+        yellow: '\x1b[33m',
+        blue: '\x1b[34m',
+        magenta: '\x1b[35m',
+        cyan: '\x1b[36m',
+        white: '\x1b[37m',
+
+        purple: '\x1b[35m',
+        light_blue: '\x1b[36m',
+
+        default: '\x1b[37m',
+        reset: '\x1b[37m',
+    },
+
+    backgroundColor: {
+        black: '\x1b[40m',
+        red: '\x1b[41m',
+        green: '\x1b[42m',
+        yellow: '\x1b[43m',
+        blue: '\x1b[44m',
+        magenta: '\x1b[45m',
+        cyan: '\x1b[46m',
+        white: '\x1b[47m',
+
+        purple: '\x1b[45m',
+        light_blue: '\x1b[46m',
+
+        default: '\x1b[47m',
+        reset: '\x1b[47m',
+    }
+});
+
+/**
+ * Resolves and returns provided Text Style.
+ * @param {string} style - The Text Style to be resolved. 
+ * @returns {string} - Console Text Style.
+ */
+function Style(style) {
+    return ConsoleStyles.resolveTextStyle(style);
+}
+
+/**
+ * Resolves and returns provided Text Color.
+ * @param {string} color - The Text Color to be resolved. 
+ * @returns {string} - Console Text Color.
+ */
+function Color(color) {
+    return ConsoleStyles.resolveTextColor(color);
+}
+
+/**
+ * Resolves and returns provided Background Color
+ * @param {string} color - The Background Color to be resolved. 
+ * @returns {string} - Console Background Color.
+ */
+function BackgroundColor(color) {
+    return ConsoleStyles.resolveBackgroundColor(color);
+}
+
+module.exports = { ConsoleStyles, Style, Color, BackgroundColor };</pre>
+    </article>
 </section>
+
 
 
 
@@ -295,10 +177,6 @@
 
 	<div class="clearfix"></div>
 
-	
-		<div class="col-md-3">
-			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
-		</div>
 	
 
 </div>
@@ -323,13 +201,13 @@
 
 <footer>
 
-	Thank you for using Atils!
+	atils by itsatelo
 
 
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a>
 	
-		on 02-27-2022
+		on Monday, March 7th 2022, 05:37:10 pm
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
@@ -375,7 +253,7 @@ $( function () {
 	} );
 
 	Sunlight.highlightAll( {
-		lineNumbers : true,
+		lineNumbers : false,
 		showMenu : true,
 		enableDoclinks : true
 	} );
@@ -406,41 +284,6 @@ $( function () {
 
 
 <!--Navigation and Symbol Display-->
-
-<script>
-	$( function () {
-		$( '#main' ).localScroll( {
-			offset : { top : 60 } //offset by the height of your header (give or take a few px, see what works for you)
-		} );
-		$( "dt.name" ).each( function () {
-			var $this = $( this ).find("h4");
-			var icon = $( "<i/>" ).addClass( "icon-plus-sign" ).addClass( "pull-right" ).addClass( "icon-white" );
-			var dt = $(this);
-			var children = dt.next( "dd" );
-
-			dt.prepend( icon ).css( {cursor : "pointer"} );
-			dt.addClass( "member-collapsed" ).addClass( "member" );
-
-
-			children.hide();
-
-			dt.children().on( "click", function () {
-				children = dt.next( "dd" );
-				children.slideToggle( "fast", function () {
-
-					if ( children.is( ":visible" ) ) {
-						icon.addClass( "icon-minus-sign" ).removeClass( "icon-plus-sign" ).removeClass( "icon-white" );
-						dt.addClass( "member-open" ).animate( "member-collapsed" );
-					} else {
-						icon.addClass( "icon-plus-sign" ).removeClass( "icon-minus-sign" ).addClass( "icon-white" );
-						dt.addClass( "member-collapsed" ).removeClass( "member-open" );
-					}
-				} );
-			} );
-
-		} );
-	} );
-</script>
 
 
 <!--Google Analytics-->

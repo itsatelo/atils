@@ -132,4 +132,13 @@ function read(base, str, prevGate) {
     return gate;
 }
 
+const structure = new StructureUtil({
+    hello: "string"
+});
+
+if(structure.is({
+    hello: 1
+})) console.log(true);
+else console.log(false);
+
 module.exports = { StructureUtil };

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>atils Class: Enum</title>
+	<title>atils Class: Structure</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,13 +72,13 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: Enum</h1>
+	<h1 class="page-title">Class: Structure</h1>
 <section>
 
 <header>
     
         <h2>
-        Enum
+        Structure
         </h2>
         
     
@@ -91,7 +91,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="Enum"><span class="type-signature"></span>new Enum(enumInfo)</h4>
+    <h4 class="name" id="Structure"><span class="type-signature"></span>new Structure(structure)</h4>
     
     
 </dt>
@@ -99,7 +99,7 @@
 
     
     <div class="description">
-        - Basic Enum Utility. Uses <a href="RawEnum.html">Raw Enums</a>.
+        - Creates a new Structure that can be used as a format for objects.
     </div>
     
 
@@ -134,7 +134,7 @@
 
         <tr>
             
-                <td class="name"><code>enumInfo</code></td>
+                <td class="name"><code>structure</code></td>
             
 
             <td class="type">
@@ -151,227 +151,7 @@
 
             
 
-            <td class="description last">The information for your resolvers, and your Enums.
-                <h6 class="method-params-label method-subparams-label">Properties</h6>
-                
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>EXAMPLE_RESOLVER</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">An example of a Resolver.
-                <h6 class="method-params-label method-subparams-label">Properties</h6>
-                
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>EXAMPLE_KEY</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">*</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">An example of a Key.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>EXAMPLE_RESOLVER_2</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Another example of a Resolver.
-                <h6 class="method-params-label method-subparams-label">Properties</h6>
-                
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>EXAMPLE_KEY_2</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">*</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Another example of a Key.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
+            <td class="description last">An object to be referenced as a Structure.</td>
         </tr>
 
     
@@ -415,7 +195,7 @@
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="atils@1.2.x_Utilities_Enum.js.html">atils@1.2.x/Utilities/Enum.js</a>
+				<a href="atils@1.2.x_Utilities_Structure.js.html">atils@1.2.x/Utilities/Structure.js</a>
 			</li>
 		</ul>
 	</dd>
@@ -442,9 +222,11 @@
     
 
     
-        <h5>Example</h5>
+        <h5>Examples</h5>
         
-    <pre class="sunlight-highlight-javascript">const { Enum } = require(&#x27;atils&#x27;);const exampleEnum = new Enum({  resolver: {    text: &quot;hello world&quot;,  }});console.log(exampleEnum.resolveResolver(&#x27;text&#x27;));// Console Output:// hello world</pre>
+    <pre class="sunlight-highlight-javascript">const { Structure } = require(&#x27;atils&#x27;);const item = new Structure({  string: String,  array: Array,  url: URL,});</pre>
+
+    <pre class="sunlight-highlight-javascript">// structure typesconst Structures = {   ARRAY: [&quot;array&quot;, &quot;[]&quot;, [], Array],   ANY: [&quot;any&quot;, &quot;*&quot;],   BIGINT: [&quot;bigint&quot;, &quot;#*&quot;, BigInt],   ENUM: [&quot;enum&quot;, &quot;!&quot;, Enum],   FUNCTION: [&quot;function&quot;, &quot;fn&quot;, &quot;()&quot;, Function],   NUMBER: [&quot;number&quot;, &quot;#&quot;, Number], // this WILL register bigints and smallints.   OBJECT: [&quot;object&quot;, &quot;{}&quot;, Object],   SMALLINT: [&quot;smallint&quot;, &quot;#!&quot;], // this will not register bigints, but will register Numbers.   STRING: [&quot;string&quot;, &quot;&#x27;&#x27;&quot;, &#x27;&quot;&quot;&#x27;, &quot;&#x60;&#x60;&quot;, String],   SYMBOL: [&quot;symbol&quot;, &quot;@&quot;, Symbol],   URL: [&quot;url&quot;, &quot;link&quot;, &quot;://&quot;, URL],  };</pre>
 
 
     
@@ -472,7 +254,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="%5Bundefined%5D"><span class="type-signature"></span>[undefined](keyToResolve)</h4>
+    <h4 class="name" id="matches"><span class="type-signature"></span>matches(object)</h4>
     
     
 </dt>
@@ -480,7 +262,7 @@
 
     
     <div class="description">
-        Resolver method for the Enum.
+        Determines if an Object matches a Structure.
     </div>
     
 
@@ -515,277 +297,92 @@
 
         <tr>
             
-                <td class="name"><code>keyToResolve</code></td>
+                <td class="name"><code>object</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The key to resolve within the Enum.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="atils@1.2.x_Utilities_Enum.js.html">atils@1.2.x/Utilities/Enum.js</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    - The value of the resolved Enum, or the reason it failed to resolve.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">*</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="%5Bundefined%5D"><span class="type-signature"></span>[undefined](resolverNameToResolve)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Returns all key-value pairs within an entire resolver.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>resolverNameToResolve</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The name of the Resolver.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="atils@1.2.x_Utilities_Enum.js.html">atils@1.2.x/Utilities/Enum.js</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    - An Object containing the key-value pairs within the Raw Enum.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
 <span class="param-type">Object</span>
 
 
 
-    </dd>
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An object to be determined if it matches the Structure.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="atils@1.2.x_Utilities_Structure.js.html">atils@1.2.x/Utilities/Structure.js</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
 </dl>
 
 
-        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 </dd>

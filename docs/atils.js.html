@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>atils Classes</title>
+	<title>atils Source: atils.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -67,124 +67,45 @@
 <div class="row">
 
 	
-	<div class="col-md-8">
+	<div class="col-md-12">
 	
 		<div id="main">
 			
 
-	<h1 class="page-title">Classes</h1>
+		<h1 class="page-title">Source: atils.js</h1>
+    
 <section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript ">const v1_1_x = require('./atils@1.1.x/Exports.js');
+const v1_2_x = require('./atils@1.2.x/Exports.js');
 
-<header>
-    
-        <h2>
-        
-        </h2>
-        
-    
-</header>
+const v10x = ['v1.0.9-stable', 'v1.0.9', 'v1.0.9-unstable', 'v1.0.8', 'v1.0.7', 'v1.0.6', 'v1.0.5', 'v1.0.4', 'v1.0.3', 'v1.0.2', 'v1.0.1', 'v1.0.0', '1.0.9-stable', '1.0.9', '1.0.9-unstable', '1.0.8', '1.0.7', '1.0.6', '1.0.5', '1.0.4', '1.0.3', '1.0.2', '1.0.1', '1.0.0', '1.0.x', 'v1.0.x', 'v1.x.x'];
+const v11x = ['v1.1.4', 'v1.1.3', 'v1.1.2', 'v1.1.1', 'v1.1.0-build', 'v1.1.0', 'v1.1.x', 'v1.1', '1.1.4', '1.1.3', '1.1.2', '1.1.1', '1.1.0-build', '1.1.0', '1.1.x', '1.1'];
+const v12x = ['v1.2.0', 'v1.2.x', '1.2.0', '1.2.x'];
 
+/**
+ * Returns through time to a previous final draft of an atils version.
+ * @param {string} version - The version of atils you would like to go back to.
+ */
+function History(version) {
+    if(v10x.includes(version)) {
+        console.log(`ATILS: This version is not supported by atils' version manager.`);
+    } else if(v11x.includes(version)) {
+        return v1_1_x;
+    } else if(v12x.includes(version)) {
+        return v1_2_x;
+    }
+}
 
-<article>
-    <div class="container-overview">
-    
-        
-
-        
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Classes</h3>
-
-        <dl>
-            <dt><a href="Console.html">Console</a></dt>
-            <dd></dd>
-        
-            <dt><a href="Enum.html">Enum</a></dt>
-            <dd></dd>
-        
-            <dt><a href="ErrorBuilder.html">ErrorBuilder</a></dt>
-            <dd></dd>
-        
-            <dt><a href="ErrorResolver.html">ErrorResolver</a></dt>
-            <dd></dd>
-        
-            <dt><a href="Merge.html">Merge</a></dt>
-            <dd></dd>
-        
-            <dt><a href="RawEnum.html">RawEnum</a></dt>
-            <dd></dd>
-        
-            <dt><a href="RawError.html">RawError</a></dt>
-            <dd></dd>
-        
-            <dt><a href="Soft.html">Soft</a></dt>
-            <dd></dd>
-        
-            <dt><a href="Structure.html">Structure</a></dt>
-            <dd></dd>
-        </dl>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
+module.exports = {
+    v11x: v1_1_x,
+    v12x: v1_2_x,
+    History,
+}</pre>
+    </article>
 </section>
+
 
 
 
@@ -194,10 +115,6 @@
 
 	<div class="clearfix"></div>
 
-	
-		<div class="col-md-3">
-			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
-		</div>
 	
 
 </div>

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>atils Classes</title>
+	<title>atils Source: atils@1.2.x/Bases/RawError.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -67,124 +67,43 @@
 <div class="row">
 
 	
-	<div class="col-md-8">
+	<div class="col-md-12">
 	
 		<div id="main">
 			
 
-	<h1 class="page-title">Classes</h1>
+		<h1 class="page-title">Source: atils@1.2.x/Bases/RawError.js</h1>
+    
 <section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript ">/**
+ * @class @extends Error
+ * @description - Creates a basic Error Instance. This is not used in the new Error Utility.
+ * @deprecated - Please use the Error Utility.
+ * 
+ * @example
+ * const { RawError } = require('atils');
+ * throw new RawError("Testing Error", "this error is a test.");
+ * // Console Output:
+ * // Testing Error: this error is a test.
+ */
+class RawError extends Error {
+    /**
+     * Constructor method for Raw Errors.
+     * @param {string} name - The name of the Error.
+     * @param {string} message - The message of the Error.
+     */
+    constructor(name, message) {
+        super(message);
+        this.name = name;
+    }
+}
 
-<header>
-    
-        <h2>
-        
-        </h2>
-        
-    
-</header>
-
-
-<article>
-    <div class="container-overview">
-    
-        
-
-        
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Classes</h3>
-
-        <dl>
-            <dt><a href="Console.html">Console</a></dt>
-            <dd></dd>
-        
-            <dt><a href="Enum.html">Enum</a></dt>
-            <dd></dd>
-        
-            <dt><a href="ErrorBuilder.html">ErrorBuilder</a></dt>
-            <dd></dd>
-        
-            <dt><a href="ErrorResolver.html">ErrorResolver</a></dt>
-            <dd></dd>
-        
-            <dt><a href="Merge.html">Merge</a></dt>
-            <dd></dd>
-        
-            <dt><a href="RawEnum.html">RawEnum</a></dt>
-            <dd></dd>
-        
-            <dt><a href="RawError.html">RawError</a></dt>
-            <dd></dd>
-        
-            <dt><a href="Soft.html">Soft</a></dt>
-            <dd></dd>
-        
-            <dt><a href="Structure.html">Structure</a></dt>
-            <dd></dd>
-        </dl>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
+module.exports = RawError;</pre>
+    </article>
 </section>
+
 
 
 
@@ -194,10 +113,6 @@
 
 	<div class="clearfix"></div>
 
-	
-		<div class="col-md-3">
-			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
-		</div>
 	
 
 </div>

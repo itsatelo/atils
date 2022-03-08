@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>atils Classes</title>
+	<title>atils Class: RawError</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,14 +72,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Classes</h1>
+	<h1 class="page-title">Class: RawError</h1>
 <section>
 
 <header>
     
         <h2>
-        
+        RawError
         </h2>
+        
+            <div class="class-description">@extends Error</div>
         
     
 </header>
@@ -89,8 +91,102 @@
     <div class="container-overview">
     
         
+<hr>
+<dt>
+    <h4 class="name" id="RawError"><span class="type-signature"></span>new RawError(name, message)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        - Creates a basic Error Instance. This is not used in the new Error Utility.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
 
         
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the Error.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The message of the Error.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
 <dl class="details">
     
 
@@ -109,6 +205,15 @@
     
 
 	
+	<dt class="important tag-deprecated method-doc-label method-doc-details-label">Deprecated:</dt>
+	
+    <dd>
+        <ul class="dummy">
+            <li>- Please use the Error Utility.</li>
+        </ul>
+    </dd>
+    
+    
 
 	
 
@@ -120,6 +225,15 @@
 
 
 
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="atils@1.2.x_Bases_RawError.js.html">atils@1.2.x/Bases/RawError.js</a>
+			</li>
+		</ul>
+	</dd>
 	
 
 	
@@ -130,7 +244,27 @@
 </dl>
 
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
         
+    <pre class="sunlight-highlight-javascript">const { RawError } = require(&#x27;atils&#x27;);throw new RawError(&quot;Testing Error&quot;, &quot;this error is a test.&quot;);// Console Output:// Testing Error: this error is a test.</pre>
+
+
+    
+</dd>
+
     
     </div>
 
@@ -138,37 +272,6 @@
 
     
 
-    
-        <h3 class="subsection-title">Classes</h3>
-
-        <dl>
-            <dt><a href="Console.html">Console</a></dt>
-            <dd></dd>
-        
-            <dt><a href="Enum.html">Enum</a></dt>
-            <dd></dd>
-        
-            <dt><a href="ErrorBuilder.html">ErrorBuilder</a></dt>
-            <dd></dd>
-        
-            <dt><a href="ErrorResolver.html">ErrorResolver</a></dt>
-            <dd></dd>
-        
-            <dt><a href="Merge.html">Merge</a></dt>
-            <dd></dd>
-        
-            <dt><a href="RawEnum.html">RawEnum</a></dt>
-            <dd></dd>
-        
-            <dt><a href="RawError.html">RawError</a></dt>
-            <dd></dd>
-        
-            <dt><a href="Soft.html">Soft</a></dt>
-            <dd></dd>
-        
-            <dt><a href="Structure.html">Structure</a></dt>
-            <dd></dd>
-        </dl>
     
 
     
