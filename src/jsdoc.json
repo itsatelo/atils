@@ -1,0 +1,19 @@
+{
+    "templates": {
+        "systemName": "atils",
+        "footer": "atils by itsatelo",
+        "includeDate": true,
+        "navType": "inline",
+        "theme": "paper",
+        "linenums": false,
+        "collapseSymbols": false,
+        "analytics": false,
+        "inverseNav": false,
+        "outputSourceFiles": true,
+        "outputSourcePath": true,
+        "dateFormat": "dddd, MMMM Do YYYY, hh:mm:ss a",
+        "syntaxTheme": "dark",
+        "sort": true,
+        "search": true
+    }
+}

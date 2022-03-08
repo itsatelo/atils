@@ -1,0 +1,29 @@
+{
+  "name": "atils",
+  "version": "1.2.0",
+  "description": "A collection of utilities meant to make the lives of JavaScript developers easier.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "atils": "atils is installed."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsatelo/atils.git"
+  },
+  "keywords": [
+    "utilities",
+    "utils"
+  ],
+  "author": "itsatelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itsatelo/atils/issues"
+  },
+  "homepage": "https://atils.js.org/",
+  "dependencies": {
+    "ink-docstrap": "^1.3.2"
+  }
+}

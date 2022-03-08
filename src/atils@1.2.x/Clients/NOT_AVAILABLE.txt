@@ -1,0 +1,38 @@
+This was going to be for an Error Client, but since I added the .throw() method to Errors, I felt it was a bit unnecessary.
+I can see why it would be used, but I don't think it's something that will be put on my priority list as of yet.
+
+Anyways, if you're reading this, you've been looking through atils' source code!
+Whether you're on GitHub, or looking through your node_modules (or whatever folder you use, since you might be using soft) folder...
+thanks for using atils!
+
+Over the past 3 months, I've learned a LOT about programming, and have seen that atils has been used by 894 people at the time of writing this, so hopefully I've helped some of you!
+Of course, I can't say I haven't installed it a few times myself (to work on different projects and such), but there's still a ton of people that use the package.
+It may not be an extremely popular package, no, but it is still something! Especially since I'm a out-of-nowhere developer who's just doing stuff for fun.
+
+Here's a couple fun little facts about the package:
+- atils was originally supposed to be specifically for discord.js!
+
+- atils gained a dev package on 3/7/2022, which holds the "concept version" for @1.2.0 (npm install atils-dev@1.2.0-dev if you want it).
+  - most of the code here is based off of that concept version, and a couple of the utilities are literally copies of that dev version (Console and Structure).
+
+- "soft" is based off of a utility that was going to be in @1.0.0, but was never added.
+    - the utility is a soft-installer, which would've been really bad if it worked...
+        - spoiler alert: it never worked, but i did make soft with that failure in mind.
+
+- atils' name is literally just "atelo" + "utils". atelo utils.
+
+- right before @1.1.3 was released, I switched NPM Accounts to my current one (itsatelo).
+
+- atils originally neglected SemVer (the versioning system used by npm)
+    - they are supposed to go MAJOR.MINOR.PATCH, but I was doing MAJOR.MINOR because I didn't think I'd constantly release patches...
+        - I'm still not releasing many patches.
+    - in @1.1.x, it started following SemVer.
+    - @2.0.0 is never going to be released (as far as I'm currently aware of; my mind changes frequently).
+        - this is because I can't constantly keep the package maintained with every little thing that i'd find useful.
+        - because of this, we might end up with @1.10.0 or something.
+        - this does differentiate from SemVer, because now it's MAJOR/MINOR.PATCH, instead of MAJOR.MINOR.PATCH.
+
+- unless I get a career in programming, @1.2.x will probably be the last series of versions for atils, since I'm becoming more and more preoccupied with other things.
+
+Thank you for using atils; if you have an issue, submit it on GitHub. I'll fix it eventually... maybe.
+-- @itsatelo, solo maintainer of atils.
