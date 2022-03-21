@@ -56,8 +56,4 @@ Please know that this version is **based from** the dev-build in `@1.2.0-dev`.<b
 - Added the `History` function, which will retrieve a previous final draft of atils.
 - Added the `URL` Structure Type to `Structure`.
 
-## Expected Changes for `atils@1.2.1`
-**There are no expected changes for this version.
-Please check the [GitHub](https://github.com/itsatelo/atils) later to see if there are any changes to this.
-
 ## Thank you for using atils.
