@@ -27,11 +27,13 @@ class Console {
      *     @param {Array} [options.styles.info] - The styling options for any information in the Console.
      */
     constructor(options) {
-        if(options.styles && typeof options.styles !== "object") new ErrorBuilder('Console Error (CU-RF.003)', 'Provided option (STYLES) must be an Object.');
-        if(options.styles.title && !Array.isArray(options.styles.title)) new ErrorBuilder('Console Error (CU-RF.004)', 'Provided option (STYLES.TITLE) must be an Array.');
-        if(options.styles.message && !Array.isArray(options.styles.message)) new ErrorBuilder('Console Error (CU-RF.005)', 'Provided option (STYLES.MESSAGE) must be an Array.');
-        if(options.styles.info && !Array.isArray(options.styles.info)) new ErrorBuilder('Console Error (CU-RF.006)', 'Provided option (STYLES.INFO) must be an Array.');
-        this.options = Object.assign({
+        if(options && options !== undefined) {
+            if(options.styles && typeof options.styles !== "object") new ErrorBuilder('Console Error (CU-RF.003)', 'Provided option (STYLES) must be an Object.');
+            if(options.styles.title && !Array.isArray(options.styles.title)) new ErrorBuilder('Console Error (CU-RF.004)', 'Provided option (STYLES.TITLE) must be an Array.');
+            if(options.styles.message && !Array.isArray(options.styles.message)) new ErrorBuilder('Console Error (CU-RF.005)', 'Provided option (STYLES.MESSAGE) must be an Array.');
+            if(options.styles.info && !Array.isArray(options.styles.info)) new ErrorBuilder('Console Error (CU-RF.006)', 'Provided option (STYLES.INFO) must be an Array.');
+        }
+            this.options = Object.assign({
             styles: {
                 title: [Styles.bright, Styles.underscore, Colors.cyan],
                 message: [Styles.dim, Colors.white],
