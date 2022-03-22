@@ -9,6 +9,11 @@
     <img src="https://img.shields.io/github/issues-raw/itsatelo/atils?color=4e0f95&style=plastic">
 </p>
 
+# We hit 1,000 downloads!
+Woohoo! 1,000! That's a pretty big number if I do say so myself! Thanks for using atils.
+
+---
+
 > Patch Notes for atils@1.2.1
 - Added the `require()` method to the `Soft Manager`. Alias of the `request()` method.
 - Fixed an issue where the `Soft Manager` would only request files from the index directory.
