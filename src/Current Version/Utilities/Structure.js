@@ -16,6 +16,13 @@ const Structures = {
     URL: ["url", "link", "://", URL],
 };
 
+const Booleans = [
+    true,
+    false,
+    "true",
+    "false",
+];
+
 /**
  * @class
  * @description - Creates a new Structure that can be used as a format for objects.
@@ -86,7 +93,7 @@ function determineIfMatches(base, object, previousGate) {
                     } else if(strKey === "BIGINT") {
                         if(typeof object[key] !== "bigint") gate = false;
                     } else if(strKey === "BOOLEAN") {
-                        if(typeof object[key] !== "boolean") gate = false;
+                        if(!Booleans.includes(object[key])) gate = false;
                     } else if(strKey === "ENUM") {
                         if(!object[key] instanceof Enum) gate = false;
                     } else if(strKey === "FUNCTION") {
@@ -110,7 +117,9 @@ function determineIfMatches(base, object, previousGate) {
                             gate = false;
                         }
                     } else {};
-                } else {};
+                } else {
+                    if(object[key] instanceof base[key]) {} else gate = false;
+                };
             });
         }
     });

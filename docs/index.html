@@ -40,7 +40,7 @@
 			<li class="dropdown">
 				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
 				<ul class="dropdown-menu inline">
-					<li><a href="global.html#BackgroundColor">BackgroundColor</a></li><li><a href="global.html#Color">Color</a></li><li><a href="global.html#History">History</a></li><li><a href="global.html#Style">Style</a></li>
+					<li><a href="global.html#BackgroundColor">BackgroundColor</a></li><li><a href="global.html#Color">Color</a></li><li><a href="global.html#ConsoleStyles">ConsoleStyles</a></li><li><a href="global.html#History">History</a></li><li><a href="global.html#Style">Style</a></li>
 				</ul>
 			</li>
 			
@@ -99,26 +99,124 @@
     <img alt="npm" src="https://img.shields.io/npm/dw/atils?color=e0495f&label=weekly%20downloads&style=plastic">
     <img src="https://img.shields.io/npm/v/atils?color=ef5094&label=version&logoColor=5094ef&style=plastic">
     <img alt="npm collaborators" src="https://img.shields.io/npm/collaborators/atils?label=collaborators&style=plastic">
-    <img src="https://img.shields.io/discord/944301669489975367?color=094e5f&label=support%20discord">
+    <img src="https://img.shields.io/discord/944301669489975367?color=094e5f&label=support%20discord&style=plastic">
     <img src="https://img.shields.io/github/last-commit/itsatelo/atils?color=e4f950&label=last%20github%20commit&style=plastic">
     <img src="https://img.shields.io/github/issues-raw/itsatelo/atils?color=4e0f95&style=plastic">
 </p>
+<blockquote>
+<p>Patch Notes for atils@1.2.1</p>
+</blockquote>
+<ul>
+<li>Added the <code>require()</code> method to the <code>Soft Manager</code>. Alias of the <code>request()</code> method.</li>
+<li>Fixed an issue where the <code>Soft Manager</code> would only request files from the index directory.</li>
+</ul>
+<blockquote>
+<p>Patch Notes for atils@1.2.2</p>
+</blockquote>
+<ul>
+<li>
+<p>Fixed atils logging &quot;false&quot; to the console whenever your script was ran.</p>
+</li>
+<li>
+<p>Fixed an issue where the <code>Console</code> Class would throw an error when no options are provided.</p>
+</li>
+<li>
+<p>Fixed an issue where the <code>Structure</code> Class would return false when a Boolean is used.</p>
+</li>
+<li>
+<p>Fixed an issue with the <code>ConsoleStyles</code> Resolver Functions.</p>
+</li>
+<li>
+<p>Added new Styles to the <code>ConsoleStyles</code> Enum.</p>
+</li>
+<li>
+<p>The <code>Structure</code> Class will now determine if an item is an instance of another item if it doesn't fit in the provided categories.</p>
+<ul>
+<li>An example of this is clarifying a Client class. Just use the class (the definition, not a new invocation) as a parameter.</li>
+<li>
+<pre class="prettyprint source lang-js"><code>const { Structure } = require('atils');
+class A {};
+const structure = new Structure({
+  example: A,
+});
+
+structure.matches({
+  example: new A(),
+}); // true
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2>notice board</h2>
+<blockquote>
+<ul>
+<li>The (Deprecated) Dev Build for <code>atils@1.2.0</code> can now be installed by using the <code>v1.2.x-dev</code> parameter with the <code>Versions</code> function.<br></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>Development for <code>atils@2.0.0</code> has begun, and the dev build is now in progress. It will be released through the <code>atils-dev</code> package periodically.<br></li>
+</ul>
+</blockquote>
 <h2>installing</h2>
-<p>To install the latest build of <code>atils</code>, run the following snippet in your terminal:<br>
-<code>npm install atils</code><br></p>
-<p>To install the dev build of <code>atils</code>, run the following snippet in your terminal:<br>
-<code>npm install atils-dev</code><br></p>
-<p>To install a specific version of <code>atils</code>, run the following snippet in your terminal: <br>
-<code>npm install atils@1.1.4</code><br>
-<em>This example uses <code>@1.1.4</code>, but you can replace that with any version.</em></p>
+<p><strong>@1.1.x</strong><br>
+<code>npm i atils</code><br></p>
+<pre class="prettyprint source lang-js"><code>const { Versions } = require('atils');
+const atils = Versions('v1.1.x');
+</code></pre>
+<p><strong>@1.2.x-dev</strong><br>
+<em>Notice: This build was a Concept Version for atils. It has no documentation and it is unclear if it properly functions.</em><br>
+<code>npm i atils</code> <strong>or</strong> <code>npm i atils-dev@1.2.0</code></p>
+<pre class="prettyprint source lang-js"><code>const { Versions } = require('atils');
+const atils = Versions('v1.2.x-dev');
+</code></pre>
+<p><strong>or</strong> (if you use the dev package)</p>
+<pre class="prettyprint source lang-js"><code>const atils = require('atils-dev');
+</code></pre>
+<p><strong>@1.2.x</strong><br>
+<code>npm i atils</code><br></p>
+<pre class="prettyprint source lang-js"><code>const atils = require('atils');
+</code></pre>
+<p><strong>@2.0.x-dev</strong><br>
+<em>Notice: This build is a development build for atils@2.0.0. It has no documentation and it is unclear if it properly functions.</em><br>
+<code>npm i atils-dev</code></p>
+<pre class="prettyprint source lang-js"><code>const atils = require('atils-dev');
+</code></pre>
 <h2>about <code>atils</code></h2>
 <p>atils is a collection of utilities meant to make the lives of JavaScript developers easier.<br>
-Over the course of three months, I've learned a lot about programming and wanted to do things like this instead of having to rewrite or copy something for every project I worked on; and so I came up with an NPM Package.</p>
+Over the course of four months, I've learned a lot about programming and computers in general, and wanted to make something to make <strong>my</strong> life easier, which I did by simple creating an npm package. It was originally just meant for me to merge a couple classes together and have better looking errors, but now I've made a ton of other stuff that winds up helping me quite a bit.</p>
 <h2>dev builds</h2>
-<p>atils has a dev build package! Well, as of right now all it has is the concept for <code>@1.2.0</code>, which should work as intended.<br>
-I don't recommend using the dev-build in comparison to the actual build, but if you want to, go ahead.</p>
+<p>atils has a dev build package available. It will contain the test builds for <code>@2.0.0</code>.<br>
+Install it by using <code>npm i atils-dev</code>.</p>
 <h2>documentation</h2>
-<p>All documentation is over at <a href="https://atils.js.org"><code>atils.js.org</code></a>, however, there will be some examples here.<br></p>
+<p>All of the documentation for the latest release of atils is at <a href="https://atils.js.org"><code>atils.js.org</code></a>, however, there will be some examples available here.<br></p>
+<h2>links</h2>
+<blockquote>
+<ul>
+<li><a href="https://discord.gg/JPch96WjJv">Support Discord</a></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><a href="https://npmjs.com/package/atils">NPM Package</a></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><a href="https://github.com/itsatelo/atils">GitHub Repository</a></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><a href="https://twitter.com/itsatelo">itsatelo's Twitter</a></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><a href="https://discord.gg/JPch96WjJv">itsatelo's Discord</a></li>
+</ul>
+</blockquote>
 <h2>examples</h2>
 <h3>RawEnum</h3>
 <pre class="prettyprint source lang-js"><code>const { RawEnum } = require('atils');
@@ -233,25 +331,7 @@ console.log(ex.matches({
 });
 // false
 </code></pre>
-<h2>links</h2>
-<ul>
-<li>
-<p><a href="https://discord.gg/JPch96WjJv">Support Discord</a></p>
-</li>
-<li>
-<p><a href="https://npmjs.com/package/atils">NPM Package</a></p>
-</li>
-<li>
-<p><a href="https://github.com/itsatelo/atils">GitHub Repository</a></p>
-</li>
-<li>
-<p><a href="https://twitter.com/itsatelo">itsatelo's Twitter</a></p>
-</li>
-<li>
-<p><a href="https://discord.gg/JPch96WjJv">itsatelo's Discord</a></p>
-</li>
-</ul>
-<h2>Contributors</h2>
+<h2>contributors</h2>
 <ul>
 <li><code>itsatelo</code></li>
 </ul>
@@ -283,7 +363,7 @@ console.log(ex.matches({
 </li>
 <li>
 <p><code>EB-F.009</code> - Occurs when a non-String item was provided for the message of the ErrorBuilder.
-<br></p>
+<br><br></p>
 </li>
 <li>
 <p><code>CU-RF.001</code> - Occurs when no item was provided for the title of the Console's record feature.</p>
@@ -302,7 +382,7 @@ console.log(ex.matches({
 </li>
 <li>
 <p><code>CU-RF.006</code> - Occurs when a non-Array item was provided for the options.styles.info for the Console.
-<br></p>
+<br><br></p>
 </li>
 <li>
 <p><code>EM-F.001</code> - Occurs when a non-Object item was provided for an Enum.</p>
@@ -312,17 +392,16 @@ console.log(ex.matches({
 </li>
 <li>
 <p><code>REM-F.003</code> - Occurs when a non-Object item was provided for a RawEnum.
-<br></p>
+<br><br></p>
 </li>
 <li>
-<p><code>SE-F.001</code> - Occurs when a non-Object item was provided for a Structure.</p>
+<p><code>SE-F.001</code> - Occurs when a non-Object item was provided for a Structure.
+<br><br></p>
 </li>
 </ul>
-<h2>other information</h2>
-<p>Latest NPM Update: <code>3/10/2022</code> by <code>@itsatelo</code> - <code>atils@1.2.0</code><br>
-Project Started On: <code>11/26/2021</code> by <code>@itsatelo</code> - <code>atils@1.0.0</code><br></p>
-<p>Thank you for using <code>atils</code>!<br>
--- @itsatelo</p></article>
+<h2>Thank you for using <code>atils</code>.</h2>
+<p>Latest NPM Update: <code>3/21/2022</code> by <code>@itsatelo</code> - <code>atils@1.2.2</code><br>
+Project Started On: <code>11/26/2021</code> by <code>@itsatelo</code> - <code>atils@1.0.0</code><br></p></article>
     </section>
 
 
@@ -370,7 +449,7 @@ Project Started On: <code>11/26/2021</code> by <code>@itsatelo</code> - <code>at
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a>
 	
-		on Monday, March 7th 2022, 05:37:10 pm
+		on Monday, March 21st 2022, 07:12:28 pm
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

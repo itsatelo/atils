@@ -9,36 +9,90 @@
     <img src="https://img.shields.io/github/issues-raw/itsatelo/atils?color=4e0f95&style=plastic">
 </p>
 
-## update: @1.2.1
-> Bug Fixes for @1.2.0<br>
-- Added the `require()` method to the `Soft` Manager. Redirects to the `request()` method.
-- Fixed an issue where the `Soft` Manager would request files from the index directory.
-- Fixed an issue where the `Console` Class would error out when no options are given.
-  - Please know that I'm uncertain if this issue is actually resolved, hence why it's still open on GitHub.
+> Patch Notes for atils@1.2.1
+- Added the `require()` method to the `Soft Manager`. Alias of the `request()` method.
+- Fixed an issue where the `Soft Manager` would only request files from the index directory.
 
-**If you find any issues, please submit them on GitHub. That will help me resolve them later.**<br>
+> Patch Notes for atils@1.2.2
+- Fixed atils logging "false" to the console whenever your script was ran.
+- Fixed an issue where the `Console` Class would throw an error when no options are provided.
+- Fixed an issue where the `Structure` Class would return false when a Boolean is used.
+- Fixed an issue with the `ConsoleStyles` Resolver Functions.
+
+- Added new Styles to the `ConsoleStyles` Enum.
+- The `Structure` Class will now determine if an item is an instance of another item if it doesn't fit in the provided categories.
+  - An example of this is clarifying a Client class. Just use the class (the definition, not a new invocation) as a parameter.
+  - ```js
+    const { Structure } = require('atils');
+    class A {};
+    const structure = new Structure({
+      example: A,
+    });
+
+    structure.matches({
+      example: new A(),
+    }); // true
+    ```
+
+## notice board
+> - The (Deprecated) Dev Build for `atils@1.2.0` can now be installed by using the `v1.2.x-dev` parameter with the `Versions` function.<br>
+
+> - Development for `atils@2.0.0` has begun, and the dev build is now in progress. It will be released through the `atils-dev` package periodically.<br>
 
 ## installing
-To install the latest build of `atils`, run the following snippet in your terminal:<br>
-`npm install atils`<br>
+**@1.1.x**<br>
+`npm i atils`<br>
+```js
+const { Versions } = require('atils');
+const atils = Versions('v1.1.x');
+```
 
-To install the dev build of `atils`, run the following snippet in your terminal:<br>
-`npm install atils-dev`<br>
+**@1.2.x-dev**<br>
+*Notice: This build was a Concept Version for atils. It has no documentation and it is unclear if it properly functions.*<br>
+`npm i atils` **or** `npm i atils-dev@1.2.0`
+```js
+const { Versions } = require('atils');
+const atils = Versions('v1.2.x-dev');
+```
+**or** (if you use the dev package)
+```js
+const atils = require('atils-dev');
+```
 
-To install a specific version of `atils`, run the following snippet in your terminal: <br>
-`npm install atils@1.1.4`<br>
-*This example uses `@1.1.4`, but you can replace that with any version.*
+**@1.2.x**<br>
+`npm i atils`<br>
+```js
+const atils = require('atils');
+```
+
+**@2.0.x-dev**<br>
+*Notice: This build is a development build for atils@2.0.0. It has no documentation and it is unclear if it properly functions.*<br>
+`npm i atils-dev`
+```js
+const atils = require('atils-dev');
+```
 
 ## about `atils`
 atils is a collection of utilities meant to make the lives of JavaScript developers easier.<br>
-Over the course of three months, I've learned a lot about programming and wanted to do things like this instead of having to rewrite or copy something for every project I worked on; and so I came up with an NPM Package.
+Over the course of four months, I've learned a lot about programming and computers in general, and wanted to make something to make **my** life easier, which I did by simple creating an npm package. It was originally just meant for me to merge a couple classes together and have better looking errors, but now I've made a ton of other stuff that winds up helping me quite a bit.
 
 ## dev builds
-atils has a dev build package! Well, as of right now all it has is the concept for `@1.2.0`, which should work as intended.<br>
-I don't recommend using the dev-build in comparison to the actual build, but if you want to, go ahead.
+atils has a dev build package available. It will contain the test builds for `@2.0.0`.<br>
+Install it by using `npm i atils-dev`.
 
 ## documentation
-All documentation is over at [`atils.js.org`](https://atils.js.org), however, there will be some examples here.<br>
+All of the documentation for the latest release of atils is at [`atils.js.org`](https://atils.js.org), however, there will be some examples available here.<br>
+
+## links
+> - [Support Discord](https://discord.gg/JPch96WjJv)
+
+> - [NPM Package](https://npmjs.com/package/atils)
+
+> - [GitHub Repository](https://github.com/itsatelo/atils)
+
+> - [itsatelo's Twitter](https://twitter.com/itsatelo)
+
+> - [itsatelo's Discord](https://discord.gg/JPch96WjJv)
 
 ## examples
 ### RawEnum
@@ -173,15 +227,7 @@ console.log(ex.matches({
 // false
 ```
 
-## links
-- [Support Discord](https://discord.gg/JPch96WjJv)
-- [NPM Package](https://npmjs.com/package/atils)
-- [GitHub Repository](https://github.com/itsatelo/atils)
-
-- [itsatelo's Twitter](https://twitter.com/itsatelo)
-- [itsatelo's Discord](https://discord.gg/JPch96WjJv)
-
-## Contributors
+## contributors
 - `itsatelo`
 
 ## error codes
@@ -194,7 +240,7 @@ console.log(ex.matches({
 - `EB-F.007` - Occurs when a non-Boolean item was provided for the autocatch option of the ErrorBuilder.
 - `EB-F.008` - Occurs when a non-String item was provided for the name of the ErrorBuilder.
 - `EB-F.009` - Occurs when a non-String item was provided for the message of the ErrorBuilder.
-<br>
+<br><br>
 
 - `CU-RF.001` - Occurs when no item was provided for the title of the Console's record feature.
 - `CU-RF.002` - Occurs when no item was provided for the message of the Console's record feature.
@@ -202,18 +248,16 @@ console.log(ex.matches({
 - `CU-RF.004` - Occurs when a non-Array item was provided for the options.styles.title for the Console.
 - `CU-RF.005` - Occurs when a non-Array item was provided for the options.styles.message for the Console.
 - `CU-RF.006` - Occurs when a non-Array item was provided for the options.styles.info for the Console.
-<br>
+<br><br>
 
 - `EM-F.001` - Occurs when a non-Object item was provided for an Enum.
 - `REM-F.002` - Occurs when a non-String item was provided for the name of a RawEnum.
 - `REM-F.003` - Occurs when a non-Object item was provided for a RawEnum.
-<br>
+<br><br>
 
 - `SE-F.001` - Occurs when a non-Object item was provided for a Structure.
+<br><br>
 
-## other information
-Latest NPM Update: `3/12/2022` by `@itsatelo` - `atils@1.2.1`<br>
+## Thank you for using `atils`.
+Latest NPM Update: `3/21/2022` by `@itsatelo` - `atils@1.2.2`<br>
 Project Started On: `11/26/2021` by `@itsatelo` - `atils@1.0.0`<br>
-
-Thank you for using `atils`!<br>
-  -- @itsatelo

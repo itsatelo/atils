@@ -33,13 +33,14 @@ class Console {
             if(options.styles.message && !Array.isArray(options.styles.message)) new ErrorBuilder('Console Error (CU-RF.005)', 'Provided option (STYLES.MESSAGE) must be an Array.');
             if(options.styles.info && !Array.isArray(options.styles.info)) new ErrorBuilder('Console Error (CU-RF.006)', 'Provided option (STYLES.INFO) must be an Array.');
         }
-            this.options = Object.assign({
+
+        this.options = {
             styles: {
-                title: [Styles.bright, Styles.underscore, Colors.cyan],
-                message: [Styles.dim, Colors.white],
-                info: [Styles.dim, Colors.green],
+                title: options.styles.title ?? [Styles.bright, Styles.underscore, Colors.cyan],
+                message: options.styles.message ?? [Styles.dim, Colors.white],
+                info: options.styles.info ?? [Styles.dim, Colors.green],
             }
-        }, options);
+        }
 
         this.lastMessage = undefined;
         this.groupNum = 0;
@@ -77,7 +78,7 @@ class Console {
         if(!title) new ErrorBuilder('Console Error (CU-RF.001)', 'Missing Title Parameter.');
         if(!message) new ErrorBuilder('Console Error (CU-RF.002)', 'Missing Message Parameter.');
 
-        if(this.options.styles.title.length > 0) {
+        if(this.options.styles.title && this.options.styles.title.length > 0) {
             const styles = [];
             this.options.styles.title.forEach(style => {
                 let invalid = true;
@@ -107,7 +108,7 @@ class Console {
 
         msg.push(`${title}${reset}: `);
 
-        if(this.options.styles.message.length > 0) {
+        if(this.options.styles.message && this.options.styles.message.length > 0) {
             const styles = [];
             this.options.styles.message.forEach(style => {
                 let invalid = true;
@@ -139,7 +140,7 @@ class Console {
 
         if(info) {
             let infoStyles;
-            if(this.options.styles.info.length > 0) {
+            if(this.options.styles.info && this.options.styles.info.length > 0) {
                 const styles = [];
                 this.options.styles.info.forEach(style => {
                     let invalid = true;

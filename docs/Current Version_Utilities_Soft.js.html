@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>atils Source: atils@1.2.x/Utilities/Soft.js</title>
+	<title>atils Source: Current Version/Utilities/Soft.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -40,7 +40,7 @@
 			<li class="dropdown">
 				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
 				<ul class="dropdown-menu inline">
-					<li><a href="global.html#BackgroundColor">BackgroundColor</a></li><li><a href="global.html#Color">Color</a></li><li><a href="global.html#History">History</a></li><li><a href="global.html#Style">Style</a></li>
+					<li><a href="global.html#BackgroundColor">BackgroundColor</a></li><li><a href="global.html#Color">Color</a></li><li><a href="global.html#ConsoleStyles">ConsoleStyles</a></li><li><a href="global.html#History">History</a></li><li><a href="global.html#Style">Style</a></li>
 				</ul>
 			</li>
 			
@@ -72,60 +72,94 @@
 		<div id="main">
 			
 
-		<h1 class="page-title">Source: atils@1.2.x/Utilities/Soft.js</h1>
+		<h1 class="page-title">Source: Current Version/Utilities/Soft.js</h1>
     
 <section>
     <article>
         <pre
             class="sunlight-highlight-javascript ">soft_script = `const fs = require('fs');
 const path = require('path');
-let modules_folder;
+let folderPath;
+let baseModulesPath = process.cwd() + '/node_modules';
 
 class Soft {
-    constructor(folder_name) {
-        modules_folder = folder_name;
+    /**
+     * 
+     * @param {Object} options - Options for Soft.
+     * @param {string} [options.folderPath] - The name of the folder to be used as the new modules folder. Defaults to ./mods
+     * @param {stirng} [options.modulesPath] - The location of your node_modules folder. Defaults to where you ran your script.
+     */
+    constructor(options) {
+        this.options = Object.assign({
+            folderPath: './mods',
+            modulesPath: baseModulesPath,
+        });
 
-        if(fs.existsSync(\`./$\{modules_folder}\`) === false) {
-            fs.mkdir(\`$\{modules_folder}\`, (err) => console.error(err));
-            fs.mkdir(\`$\{modules_folder}/node_modules\`, (err) => console.error(err));
+        folderPath = this.options.folderPath;
+        baseModulesPath = this.options.modulesPath;
 
-            fs.writeFileSync(\`$\{modules_folder}/soft.atils.txt\`, \`Soft is just a simple way to rename your node_modules folder.\`);
-        } else {
-            if(fs.existsSync(\`./$\{modules_folder}\`) === false) {
-                fs.mkdir(\`$\{modules_folder}/node_modules\`, (err) => console.error(err));
-                fs.writeFileSync(\`$\{modules_folder}/soft.atils.txt\`, \`Soft is just a simple way to rename your node_modules folder.\`);
-            }
+        if(fs.existsSync(folderPath) === false) {
+            fs.mkdir(folderPath, (err) => console.error(err));
+            if(fs.existsSync(\`$\{folderPath}/node_modules\`) === false) fs.mkdir(\`\${folderPath}/node_modules\`, (err) => console.error(err));
         }
 
-        if(fs.existsSync('./node_modules') === true) {
-            copyDir('./node_modules', \`./$\{modules_folder}/node_modules\`);
+        if(fs.existsSync(process.cwd() + "/node_modules") === true) {
+            copyDirectory(\`$\{process.cwd()}/node_modules`, `$\{folderPath}/node_modules\`);
         }
     }
-    request(file) {
-        if(file.startsWith('.')) {
-            return require(file);
+
+    request(package) {
+        if(package.startsWith('.')) {
+            const packageReader = package.split(/\/|\\/gi);
+            let packagePath = getFilePath()[1].getFileName().split('').splice(-1);
+            packageReader.forEach(item => {
+                if(item === '..') {
+                    packagePath.splice(-1);
+                } else if(item === ".") {
+                    
+                } else {
+                    packagePath.push(item);
+                }
+            });
+
+            return require(packagePath.join('/'));
+            
         } else {
-            return require(\`./$\{modules_folder}/node_modules/$\{file}\`);
+            return require(\`\${folderPath}/node_modules/\${package}\`);
         }
+    }
+
+    require(package) {
+        return this.request(package);
     }
 }
 
-function copyDir(source, destination) {
+function copyDirectory(source, destination) {
     fs.mkdirSync(destination, { recursive: true });
-
     fs.readdirSync(source, { withFileTypes: true }).forEach((entry) => {
         let sourcePath = path.join(source, entry.name);
         let destinationPath = path.join(destination, entry.name);
 
         entry.isDirectory()
-            ? copyDir(sourcePath, destinationPath)
+            ? copyDirectory(sourcePath, destinationPath)
             : fs.copyFileSync(sourcePath, destinationPath);
     });
 
-    setTimeout(() => {
-        fs.rmSync('./node_modules', { recursive: true, force: true });
-    }, 3000);
+    console.log(\`Deleting node_modules folder (it has been copied) in 3 seconds.\`);
 
+    setTimeout(() => {
+        fs.rmSync(baseModulesPath, { recursive: true, force: true });
+    }, 3000);
+}
+
+function getFilePath() {
+    const original = Error.prepareStackTrace;
+    Error.prepareStackTrace = function(_, stack) { return stack; };
+    const Err = new Error;
+    Error.captureStackTrace(Err, arguments.callee);
+    const stack = Err.stack;
+    Error.prepareStackTrace = original;
+    return stack;
 }
 
 module.exports = Soft;`
@@ -215,7 +249,7 @@ module.exports = Soft;</pre>
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a>
 	
-		on Monday, March 7th 2022, 05:37:10 pm
+		on Monday, March 21st 2022, 07:12:28 pm
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
